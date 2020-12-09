@@ -9,6 +9,8 @@ var server = http.createServer(function(request, response) {
 
 var port = 3000;
 server.listen(port);
-
-console.log("Server running at http://localhost:%d", port);
+var host = server.address().address;
+var serverport = server.address().port;
+console.log('running at http://' + host + ':' + serverport)
+console.log("Server running at http://%d:%d", port);
 
